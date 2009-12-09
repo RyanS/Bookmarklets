@@ -13,5 +13,5 @@ end
 desc "Creates a bookmarklet that calls the provided function"
 task :create_bookmarklet do
   puts "The bookmarklet has been copied to your pasteboard. Create a new bookmark and hit paste!"
-  `echo "javascript:(function(){var script=document.createElement('script'),src=typeof(Sizzle)!='undefined'?'http://github.com/RyanS/Bookmarklets/raw/master/release/bookmarklets.min.js':'http://github.com/RyanS/Bookmarklets/raw/master/release/bookmarklets_with_sizzle.min.js';window.__bf__='#{ENV['function']}';script.src=src+'?'+(new%20Date().getTime());document.body.appendChild(script);})();" | pbcopy`
+  `echo "javascript:(function(){var%20script=document.createElement('script'),src=typeof(Sizzle)!='undefined'?'http://github.com/RyanS/Bookmarklets/raw/master/release/bookmarklets.min.js':'http://github.com/RyanS/Bookmarklets/raw/master/release/bookmarklets_with_sizzle.min.js';window.__bf__='#{ENV['function']}';script.src=src+'?'+(new%20Date().getTime());document.body.appendChild(script);})();" | pbcopy`
 end
