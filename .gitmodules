@@ -1,0 +1,3 @@
+[submodule "vendor/sizzle"]
+	path = vendor/sizzle
+	url = git://github.com/jeresig/sizzle.git
