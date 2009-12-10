@@ -1,6 +1,13 @@
 h1. Bookmarklets
 
-Info on what a bookmarklet is: [http://www.bookmarklets.com/about/
+Info on what a bookmarklet is: http://www.bookmarklets.com/about/
 
-I would love to list them here but github/textile seems to strip out the javascript part from the links.
+*Create Gmail Mailto Links* will convert all mailto links into links that will open gmail. This is unnecessary in Firefox 3+.
 
+<pre>javascript:(function(){var%20script=document.createElement('script'),src=typeof(Sizzle)!='undefined'?'http://github.com/RyanS/Bookmarklets/raw/master/release/bookmarklets.min.js':'http://github.com/RyanS/Bookmarklets/raw/master/release/bookmarklets_with_sizzle.min.js';window.__bf__='g_mailto_links()';script.src=src+'?'+(new%20Date().getTime());document.body.appendChild(script);})();</pre>
+
+*Highlight DOM elements with inline styles* This will highlight all DOM elements that have an inline style with a red border. Useful when trying clean up a page. Does not differentiate between styles that were added with Javascript and styles that were already applied to the markup. Can't quite figure out how I would do that.
+
+<pre>javascript:(function(){var%20script=document.createElement('script'),src=typeof(Sizzle)!='undefined'?'http://github.com/RyanS/Bookmarklets/raw/master/release/bookmarklets.min.js':'http://github.com/RyanS/Bookmarklets/raw/master/release/bookmarklets_with_sizzle.min.js';window.__bf__='find_style_attributes()';script.src=src+'?'+(new%20Date().getTime());document.body.appendChild(script);})();</pre>
+
+In order to get these to work create a new bookmark and copy the text in the <pre>code section</pre> in to the address part of the bookmark.
